@@ -17,5 +17,6 @@
 - How to use `import` in Python
   - absolute vs relative imports
   - Purpose of `__init.py__`
+  - Purpose of main function
 - How to use the debugger
   - `pdb` and `ipdb`
