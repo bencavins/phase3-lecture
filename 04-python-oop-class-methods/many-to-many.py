@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     # get all cocktails per bar
     print('Drinks for ' + bar1.name)
-    for drink in bar1.cocktails:``
+    for drink in bar1.cocktails:
         drink.get_proof()
     
     print('-'*10)
