@@ -17,7 +17,7 @@ class ContactInfo(Base):
     id = Column(Integer(), primary_key=True)
     phone = Column(String())
     employee_id = Column(Integer(), ForeignKey('employee.id'))
-    employee = relationship('Employee', backref=backref('employee', uselist=False), back_populates='contact_info')
+    employee = relationship('Employee', backref=backref('contact_info', uselist=False))
 
 
 def create():
@@ -37,5 +37,7 @@ if __name__ == '__main__':
     with Session(engine) as session:
         c = session.query(ContactInfo).first()
         print(c.phone, c.employee.name)
+        e = session.query(Employee).first()
+        print(e.name, e.contact_info.phone)
     
         
