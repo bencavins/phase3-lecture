@@ -79,6 +79,6 @@ for (let i = 0; i < 10; i++) {
 
 // for item in collection
 let seq = ['a', 'b', 'c']
-for (let char in seq) {
+for (let char of seq) {
     // loop code
 }
