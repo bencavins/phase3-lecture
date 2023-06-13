@@ -1,30 +1,30 @@
 my_dict = {}
 
-# TODO Add a key/value pair
+# Add a key/value pair
 my_dict['key'] = 'value'
 
-# TODO Update a value
+# Update a value
 my_dict['key'] = 'new value'
 
-# TODO Use an invalid key
+# Use an invalid key
 
-# TODO Test if a key exists
+# Test if a key exists
 'key' in my_dict
 
-# TODO use .get()
+# use .get()
 
-# TODO Delete a key
+# Delete a key
 my_dict.pop('key')
 
-# TODO get the length of a dict
+# get the length of a dict
 len(my_dict)
 
-# TODO Merge two dicts
+# Merge two dicts
 my_dict.update({'x': 'y'})
 
-# TODO copy a dict
+# copy a dict
 my_dict.copy()
 
-# TODO loop over a dict
+# loop over a dict
 for key in my_dict:
     pass
