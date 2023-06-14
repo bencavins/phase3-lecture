@@ -6,4 +6,14 @@ Write a class that represents a dog. We should be able to:
 """
 
 class Dog:
-    pass  # TODO implement
+    # constructor 
+    def __init__(self, name='fido', age=1):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        print(f'{self.name} says: bark!')
+    
+    def __repr__(self):
+        return f'<Dog name={self.name} age={self.age} >'
+

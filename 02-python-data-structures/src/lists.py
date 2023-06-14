@@ -42,3 +42,12 @@ my_list.sort()
 
 # sorted() vs .sort()
 sorted(my_list)
+
+# list comprehension 
+result = []
+for num in range(0, 10):
+    if True:
+        result.append(num * 2)
+
+result2 = [x for x in range(0, 10)]
+print(result2)
