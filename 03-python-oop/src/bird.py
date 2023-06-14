@@ -5,4 +5,25 @@ Write a Bird class that lets us:
 """
 
 class Bird:
-    pass  # TODO implement
+    def __init__(self, name):
+        self.name = name
+        self.is_pretty = True
+
+    @property
+    def is_pretty(self):
+        return self._is_pretty
+    
+    @is_pretty.setter
+    def is_pretty(self, new_val):
+        self._is_pretty = bool(new_val)
+
+    @property
+    def name(self):  # getter (get_name)
+        return self._name
+
+    @name.setter
+    def name(self, new_name): # setter (get_name)
+        if len(new_name) > 0:
+            self._name = new_name
+        else:
+            raise Exception('invalid name')
