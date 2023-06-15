@@ -4,10 +4,27 @@ Write a Bird class that lets us:
 - Store the bird's type as a string called 'type' (for example, 'goose', 'swallow', 'robin', etc)
 """
 
+
 class Bird:
-    def __init__(self, name):
+    all_birds = []
+    genus = 'avian'
+
+    @classmethod
+    def get_genus(cls):
+        return cls.genus
+
+    @classmethod
+    def all_names(cls):
+        return [b.name for b in cls.all_birds]
+    
+    @classmethod
+    def all_species(cls):
+        return [b.species for b in cls.all_birds]
+
+    def __init__(self, name='hihi', species=''):
         self.name = name
         self.is_pretty = True
+        Bird.all_birds.append(self)
 
     @property
     def is_pretty(self):
@@ -27,3 +44,9 @@ class Bird:
             self._name = new_name
         else:
             raise Exception('invalid name')
+
+
+if __name__ == '__main__':
+    Bird()
+    Bird(name='joe')
+    Bird(name='tweety')

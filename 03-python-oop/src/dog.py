@@ -42,3 +42,6 @@ class Dog:
         return f'<Dog name={self.name} age={self.age} >'
 
 
+if __name__ == '__main__':
+    my_dog = Dog()
+    print(my_dog)
