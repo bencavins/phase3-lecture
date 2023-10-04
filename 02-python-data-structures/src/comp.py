@@ -5,6 +5,6 @@ for number in my_list:
         result.append(number * 2)
 print(result)
 
-# [(transformation) (looping def) (condition/filter * optional)]
+# [(transformation) (looping def) (condition/filter *optional*)]
 result = [number * 2 for number in my_list if number % 2 == 0]
 print(result)
