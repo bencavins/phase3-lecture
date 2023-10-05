@@ -16,15 +16,19 @@ class User:
         return self.first_name + ' ' + self.last_name
 
 
-u = User('joe', 'smith', 'pass123')
-print(u.full_name)
-
-
 class Dog:
+    genus = 'canine'
+    all = []
+
+    @classmethod
+    def print_all_dogs(cls):
+        print(cls.all)
+
     # constructor 
     def __init__(self, name, age=None):
         self._name = name
         self.age = age
+        Dog.all.append(self)
 
     # getter function for age
     @property
@@ -61,9 +65,15 @@ class Dog:
 
 
 my_dog = Dog('fido', 7)
+another_dog = Dog('rex', 4)
+
+Dog.print_all_dogs()
+# print(Dog.all)
+
 # my_dog.age = 'hello'
 # my_dog.name = 'rex'
-print(my_dog)
-# another_dog = Dog('rex', 4)
+# print(my_dog)
+
 # another_dog.bark()
 # print(another_dog)
+
