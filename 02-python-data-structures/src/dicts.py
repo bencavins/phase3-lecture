@@ -1,21 +1,36 @@
-my_dict = {}
+my_dict = {
+    'name': 'joe',
+    'age': 30
+}
 
-# TODO Add a key/value pair
+# Add a key/value pair
+my_dict['key'] = 123456789
 
-# TODO Update a value
+# Update a value
+my_dict['key'] = 123456789
 
-# TODO Use an invalid key
+# Use an invalid key
+my_dict['badkey']  # raises KeyError
 
-# TODO Test if a key exists
+# Test if a key exists
+'badkey' in my_dict
 
-# TODO use .get()
+# use .get()
+my_dict.get('key', 'defaultvalue')
+my_dict.setdefault('key', 'defaultvalue')  # actually sets the key/value pair
 
-# TODO Delete a key
+# Delete a key
+my_dict.pop('badkey')
 
-# TODO get the length of a dict
+# get the length of a dict
+len(my_dict)
 
-# TODO Merge two dicts
+# Merge two dicts
+my_dict.update({'height': 123})
 
-# TODO copy a dict
+# copy a dict
+my_dict.copy()
 
-# TODO loop over a dict
+# loop over a dict
+for key in my_dict:
+    print(key, my_dict[key])  # key, value
