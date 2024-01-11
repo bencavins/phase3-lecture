@@ -59,19 +59,18 @@ class Dog:
         self.name = name  # attributes
         self.age = age
     
-    # properties new school
-    @property
-    def age(self):
+    def get_age(self):
         """Getter function for age"""
         print('in age getter')
         return self._age # this prevents a name conflict
     
-    @age.setter
-    def age(self, new_age):
+    def set_age(self, new_age):
         """Setter function for age"""
         print('in setter')
         if new_age >= 0:
             self._age = new_age
+
+    age = property(get_age, set_age)
     
     def bark(self):  # methods
         print(f'{self.name} says bark!')
