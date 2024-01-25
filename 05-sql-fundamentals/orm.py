@@ -18,19 +18,19 @@ class Album:
     @classmethod
     def get_by_id(cls, id):
         sql = """
-SELECT AlbumId, Title, ArtistId
-FROM albums
-WHERE AlbumId = ?
-"""
+            SELECT AlbumId, Title, ArtistId
+            FROM albums
+            WHERE AlbumId = ?
+        """
         row = cursor.execute(sql, [id]).fetchone()
         return Album(id=row[0], title=row[1], artist_id=row[2])
     
     @classmethod
     def get_all_albums(cls):
         sql = """
-SELECT AlbumId, Title, ArtistId
-FROM albums
-"""
+            SELECT AlbumId, Title, ArtistId
+            FROM albums
+        """
         albums = []
         for row in cursor.execute(sql):
             albums.append(Album(id=row[0], title=row[1], artist_id=row[2]))
