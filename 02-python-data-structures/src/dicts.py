@@ -1,21 +1,54 @@
-my_dict = {}
+my_dict = {
+    'id': 1,
+    'name': 'joe',
+    'age': 44.5,
+    'list': [1, 2, 3]
+}
 
-# TODO Add a key/value pair
+p2 = {
+    'id': 2,
+    'name': 'anne',
+    'age': 34,
+    'list': [1, 2, 3]
+}
 
-# TODO Update a value
+# get value at key
+my_dict['id']
 
-# TODO Use an invalid key
+# Add a key/value pair
+my_dict['newkey'] = 'newvalue'
 
-# TODO Test if a key exists
+# Update a value
+my_dict['id'] = 99
 
-# TODO use .get()
+# Use an invalid key
+my_dict['missingkey']
 
-# TODO Delete a key
+# Test if a key exists
+'id' in my_dict
 
-# TODO get the length of a dict
+# use .get()
+my_dict.get('missing')
+my_dict.get('missing', 'default value')
 
-# TODO Merge two dicts
+# get values
+my_dict.values()
 
-# TODO copy a dict
+# Delete a key
+my_dict.pop('newkey')
 
-# TODO loop over a dict
+# get the length of a dict
+len(my_dict)
+
+# Merge two dicts
+my_dict.update({'x': 'y'})
+
+# copy a dict
+my_dict.copy()
+
+# loop over a dict
+for key in my_dict:
+    print(key, my_dict[key])  # print(key, value)
+
+for key, value in my_dict.items():
+    print(key, value)  # print(key, value)
