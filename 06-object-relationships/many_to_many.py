@@ -11,8 +11,9 @@ class User:
         return result
     
     def get_movies(self):
+        """Gets all of the movies this user wrote a review for"""
         result = []
-        reviews = self.get_reviews()
+        reviews = self.get_reviews()  # this function will get all the reviews for this user
         for review in reviews:
             result.append(review.movie)
         return result
@@ -40,6 +41,7 @@ class Movie:
         self.title = title
 
     def get_reviews(self):
+        """Get all the reviews for this movie"""
         result = []
         for review in Review.all:
             if review.movie is self:
@@ -59,7 +61,7 @@ anne = User('anne789')
 joe.get_reviews()
 anne.get_reviews()
 
-m1 = Movie('shawsank redemption')
+m1 = Movie('shawshank redemption')
 m2 = Movie('finding nemo')
 m3 = Movie('shrek')
 
