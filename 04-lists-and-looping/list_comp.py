@@ -13,7 +13,7 @@ print(old_array)
 print(new_array)
 
 
-# loop with a list comprehension
+# same loop with a list comprehension
 old_array = [1, 2, 3, 4, 5]
 new_array = [item for item in old_array]
 print(old_array)
