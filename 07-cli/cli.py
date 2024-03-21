@@ -25,34 +25,40 @@ def check_input(value, target):
         return True  # still playing
 
 
-is_playing = True
-target = get_target()
+
+def run():
+    is_playing = True
+    target = get_target()
 
 
-s = """
-      ___           ___           ___           ___           ___     
-     /\__\         /\  \         /\__\         /\__\         /\__\    
-    /:/ _/_        \:\  \       /:/ _/_       /:/ _/_       /:/ _/_   
-   /:/ /\  \        \:\  \     /:/ /\__\     /:/ /\  \     /:/ /\  \  
-  /:/ /::\  \   ___  \:\  \   /:/ /:/ _/_   /:/ /::\  \   /:/ /::\  \ 
- /:/__\/\:\__\ /\  \  \:\__\ /:/_/:/ /\__\ /:/_/:/\:\__\ /:/_/:/\:\__\
- \:\  \ /:/  / \:\  \ /:/  / \:\/:/ /:/  / \:\/:/ /:/  / \:\/:/ /:/  /
-  \:\  /:/  /   \:\  /:/  /   \::/_/:/  /   \::/ /:/  /   \::/ /:/  / 
-   \:\/:/  /     \:\/:/  /     \:\/:/  /     \/_/:/  /     \/_/:/  /  
-    \::/  /       \::/  /       \::/  /        /:/  /        /:/  /   
-     \/__/         \/__/         \/__/         \/__/         \/__/   
-"""
-# print(s)
+    s = """
+       ___           ___           ___           ___           ___     
+      /\__\         /\  \         /\__\         /\__\         /\__\    
+     /:/ _/_        \:\  \       /:/ _/_       /:/ _/_       /:/ _/_   
+    /:/ /\  \        \:\  \     /:/ /\__\     /:/ /\  \     /:/ /\  \  
+    /:/ /::\  \   ___  \:\  \   /:/ /:/ _/_   /:/ /::\  \   /:/ /::\  \ 
+    /:/__\/\:\__\ /\  \  \:\__\ /:/_/:/ /\__\ /:/_/:/\:\__\ /:/_/:/\:\__\
+    \:\  \ /:/  / \:\  \ /:/  / \:\/:/ /:/  / \:\/:/ /:/  / \:\/:/ /:/  /
+    \:\  /:/  /   \:\  /:/  /   \::/_/:/  /   \::/ /:/  /   \::/ /:/  / 
+    \:\/:/  /     \:\/:/  /     \:\/:/  /     \/_/:/  /     \/_/:/  /  
+        \::/  /       \::/  /       \::/  /        /:/  /        /:/  /   
+        \/__/         \/__/         \/__/         \/__/         \/__/   
+    """
+    # print(s)
 
-while is_playing:
-    os.system('clear')
-    value = input("Enter a number (type 'q' to quit): ")
+    while is_playing:
+        # os.system('clear')
+        value = input("Enter a number (type 'q' to quit): ")
 
-    if value == 'q':
-        print('user quit')
-        exit()
+        if value == 'q':
+            print('user quit')
+            exit()
 
-    value = int(value)
-    is_playing = check_input(value, target)
-    
-print('done')
+        value = int(value)
+        is_playing = check_input(value, target)
+        
+    print('done')
+
+
+if __name__ == '__main__':
+    run()
