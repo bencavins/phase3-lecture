@@ -16,3 +16,7 @@
         - iterating
     - set
     - tuple
+- Looping
+    - for each
+    - map
+    - filter
