@@ -126,3 +126,8 @@ def get_priciest_gemstone(gemstones):
 # example
 # print(get_priciest_gemstone(test_data))
 # #=> {'name': 'diamond', 'price': 5999.99}
+
+
+# BONUS CHALLENGE!
+# If you are comfortable with writing the above loops,
+# try using a list comprehension for each!
