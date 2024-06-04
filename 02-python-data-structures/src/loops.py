@@ -1,27 +1,28 @@
+# ====== basic looping ======
 my_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 
 # simple for loop (no indices)
-# for item in my_list:
-#     print(item)
+for item in my_list:
+    print(item)
 
-# # for loop with indices
-# for i in range(0, len(my_list)):
-#     print(i, my_list[i])
+# for loop with indices
+for i in range(0, len(my_list)):
+    print(i, my_list[i])
 
 # loop over dict
-# my_dict = {
-#     'name': 'joe',
-#     'age': 55
-# }
-# for key in my_dict:
-#     print(key, my_dict[key])
+my_dict = {
+    'name': 'joe',
+    'age': 55
+}
+for key in my_dict:
+    print(key, my_dict[key])
 
-# # using .items()
-# for key, value in my_dict.items():
-#     print(key, value)
+# using .items()
+for key, value in my_dict.items():
+    print(key, value)
 
 
-# map 
+# ====== map ====== 
 my_list = [1, 2, 3, 4, 5]
 
 def double(numbers):
@@ -36,7 +37,7 @@ print(my_list)
 print(double(my_list))
 
 
-# filter
+# ====== filter ======
 my_list = [1, 2, 3, 4, 5, -1, -2, 6, 7, -8]
 
 def get_posis(numbers):
@@ -51,7 +52,7 @@ print(my_list)
 print(get_posis(my_list))
 
 
-# min/max problem
+# ====== min/max problem ======
 my_list = [
     {
         'name': 'bob',
