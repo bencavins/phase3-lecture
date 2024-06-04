@@ -1,21 +1,38 @@
-my_dict = {}
+my_dict = {
+    'name': 'joe',
+    'age': 55
+}
 
-# TODO Add a key/value pair
+# Key lookup
+my_dict['name']
 
-# TODO Update a value
+# Add a key/value pair
+my_dict['phone'] = '555-555-5555'
 
-# TODO Use an invalid key
+# Update a value
+my_dict['phone'] = '555-555-5555'
 
-# TODO Test if a key exists
+# Use an invalid key
+my_dict['badkey']  # raises KeyError
 
-# TODO use .get()
+# Test if a key exists
+'name' in my_dict
 
-# TODO Delete a key
+# use .get()
+my_dict.get('badkey')
+my_dict.get('badkey', 'missing value')  # second arg is default value
 
-# TODO get the length of a dict
+# Delete a key
+my_dict.pop('age')
+del my_dict['age']
 
-# TODO Merge two dicts
+# get the length of a dict
+len(my_dict)
 
-# TODO copy a dict
+# Merge two dicts
+my_dict.update({'age': 6, 'phone': '555-555-5555'})
+
+# copy a dict
+my_dict.copy()
 
 # TODO loop over a dict
