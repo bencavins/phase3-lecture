@@ -1,19 +1,33 @@
 # 1. write a function that takes an array of numbers and squares each number
 def get_sqares(numbers):
-    pass
+    # no comp
+    square = []
+    for num in numbers:
+        square.append(num ** 2)
+    return square
+
+    # with comp
+    return [num ** 2 for num in numbers]
 
 # example
-# print(get_sqares([1, 2, 3, 4, 5]))
-# #=> [1, 4, 9, 16, 25]
+print(get_sqares([1, 2, 3, 4, 5]))
+#=> [1, 4, 9, 16, 25]
 
 
 
 # 2. write a function that filters out all the odd numbers
 def get_evens(numbers):
-    pass
+    result = []
+    for number in numbers:
+        if number % 2 == 0:
+            result.append(number)
+    return result
+
+    # with comp
+    return [number for number in numbers if number % 2 == 0]
 
 # example
-# print(get_evens([1, 2, 3, 4, 5]))
+print(get_evens([1, 2, 3, 4, 5]))
 # #=> [2, 4]
 
 
@@ -21,7 +35,13 @@ def get_evens(numbers):
 # 3. write a function that takes an array of dicts and returns an
 # array of the 'name' values
 def get_names(people):
-    pass
+    array = []
+    for item in people:
+        array.append(item['name'])
+    return array
+
+    # with comp
+    return [item['name'] for item in people]
 
 test_data = [
     {
@@ -39,14 +59,21 @@ test_data = [
 ]
 
 # example
-# print(get_names(test_data))
+print(get_names(test_data))
 # #=> ['kermit', 'mrs. piggy', 'gonzo']
 
 
 
 # 4. write a function that filters out all fruit that isn't red
-def get_reds(fruit):
-    pass
+def get_reds(fruits):
+    result = []
+    for fruit in fruits:
+        if fruit['color'] == 'red':
+            result.append(fruit)
+    return result
+
+    # with comp
+    return [fruit for fruit in fruits if fruit['color'] == 'red']
 
 test_data = [
     {
@@ -68,7 +95,7 @@ test_data = [
 ]
 
 # example
-# print(get_reds(test_data))
+print(get_reds(test_data))
 # #=> [{'name': 'strawberry', 'color': 'red'}, {'name': 'raspberry', 'color': 'red'}]
 
 
@@ -93,10 +120,17 @@ test_data = [
     },
 ]
 def get_nintendo_titles(games):
-    pass
+    array = []
+    for game in games:
+        if game['platform'] == 'nintendo' or game['platform'] == 'all':
+            array.append(game['title'])
+    return array
+
+    # with comp
+    return [game['title'] for game in games if game['platform'] == 'nintendo' or game['platform'] == 'all']
 
 # example
-# print(get_nintendo_titles(test_data))
+print(get_nintendo_titles(test_data))
 # #=> ['legend of zelda', 'super mario bros', 'fortnite']  # <= tricky! fortnite counts!
 
 
@@ -121,13 +155,20 @@ test_data = [
     },
 ]
 def get_priciest_gemstone(gemstones):
-    pass
+    priciest = gemstones[0]
+    for gem in gemstones:
+        if gem['price'] > priciest['price']:
+            priciest = gem
+    return priciest
+
+    # can't use list comp but can use fancy lambda function solution
+    return max(gemstones, key=lambda gem: gem['price'])
 
 # example
-# print(get_priciest_gemstone(test_data))
+print(get_priciest_gemstone(test_data))
 # #=> {'name': 'diamond', 'price': 5999.99}
 
 
 # BONUS CHALLENGE!
 # If you are comfortable with writing the above loops,
-# try using a list comprehension for each!
+# try using a list comprehension for each! (Can't with #6)
