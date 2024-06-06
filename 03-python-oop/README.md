@@ -20,8 +20,11 @@
     - Polymorphism
 - Object relationships
     - one-to-one (can maybe skip this one)
+        - `Employee`, `ContactInfo`
     - one-to-many
         - single source of truth, advantages and disadvantages
+        - `Author`, `Book`
     - many-to-many
         - with join table
         - without join table
+        - `Theater`, `Movie`, `ShowTime`
