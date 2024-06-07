@@ -31,15 +31,21 @@ class Theater:
     
     def get_total_gross(self):
         """Returns the total gross for all movies playing at this theater"""
-        pass
+        total = 0
+        for movie in self.get_movies():
+            total += movie.box_office_gross
+        return total
 
     def get_avg_gross(self):
         """Returns the average gross for all movies playing at this theater"""
-        pass
+        # total_gross = self.get_total_gross()
+        # movie_count = len(self.get_movies())
+        # return total_gross / movie_count
+        return self.get_total_gross() / len(self.get_movies())
 
     def is_showing(self, movie):
-        """Returns True if this movie is playing at this theater"""
-        pass
+        """Returns True if this movie object is playing at this theater"""
+        return movie in self.get_movies()
 
     def __repr__(self):
         return f'<Theater {self.name}>'
@@ -91,4 +97,4 @@ s2 = ShowTime('8:00pm', m1, t1)
 s3 = ShowTime('6:00pm', m1, t2)
 s4 = ShowTime('12:00pm', m2, t1)
 
-print(t1.get_highest_grossing_movie())
+print(t2.is_showing(m1))

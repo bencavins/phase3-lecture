@@ -50,9 +50,11 @@ class Rectangle:
     def __repr__(self):
         return f'<Rectangle w:{self.width}, h:{self.height}, a:{self.get_area()}>'
 
-# build a rectangle object
-r1 = Rectangle(2, 3)
-r2 = Rectangle(6, 9)
 
-print(r1)
-print(r2)
+if __name__ == '__main__':
+    # build a rectangle object
+    r1 = Rectangle(2, 3)
+    r2 = Rectangle(6, 9)
+
+    print(r1)
+    print(r2)
