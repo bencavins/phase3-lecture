@@ -10,6 +10,14 @@ class Author:
             if book.author is self:
                 result.append(book)
         return result
+
+    def get_best_seller(self):
+        """Returns the book with the most sales"""
+        pass
+
+    def get_total_sales(self):
+        """Returns the sum of all sales for this author"""
+        pass
     
     def print_books(self):
         for book in self.books:

@@ -37,6 +37,10 @@ class Theater:
         """Returns the average gross for all movies playing at this theater"""
         pass
 
+    def is_showing(self, movie):
+        """Returns True if this movie is playing at this theater"""
+        pass
+
     def __repr__(self):
         return f'<Theater {self.name}>'
 
