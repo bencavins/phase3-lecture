@@ -1,5 +1,11 @@
 # SQL
 
+Standard Query Language
+
+VSCode extenstions:
+- SQLite
+- SQLite Viewer
+
 ### Learning Goals
 - SQL Basics
     - Tables
