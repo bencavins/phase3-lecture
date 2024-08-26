@@ -73,7 +73,7 @@ while False:
 
 
 # for loop
-for i in range(10):
+for i in range(0, 10):
     pass  # loop code
 
 
@@ -81,3 +81,5 @@ for i in range(10):
 seq = ['a', 'b', 'c']
 for char in seq:
     pass  # loop code
+
+
