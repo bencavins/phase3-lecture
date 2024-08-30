@@ -4,7 +4,7 @@ from animal import Animal  # import Animal class from animal.py
 class Dog(Animal):  # Dog inherits from Animal
     sound = 'bark'
 
-    def __init__(self, name, age, breed):
+    def __init__(self, name, age, breed=None):
         # call super and let the parent set the name, age
         super().__init__(name, age)  # Animal.__init__(name, age)
         self.breed = breed
