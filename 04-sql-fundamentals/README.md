@@ -1,4 +1,7 @@
-# SQL
+# SQL (Standart Query Language)
+
+# SQLite
+## Nice, lightweight database 
 
 ### Learning Goals
 - SQL Basics
