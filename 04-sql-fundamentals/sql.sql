@@ -1,3 +1,8 @@
+-- Relationtion databases (Oracle, MySQL, PostgreSQL, SQLite)
+-- Made of tables where the rows relate to each other 
+-- Uses SQL (Standard Query Language) to communicate
+
+-- Databases support CRUD actions
 -- CRUD (Create, Read, Update, Delete)
 -- (create table and insert into, select, update, delete)
 
