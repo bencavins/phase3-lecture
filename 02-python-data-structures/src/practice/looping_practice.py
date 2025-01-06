@@ -6,7 +6,10 @@
 
 # 1. write a function that takes an array of numbers and squares each number
 def get_sqares(numbers):
-    pass
+    result = []
+    for num in numbers:
+        result.append(num ** 2)
+    return result
 
 # example
 # print(get_sqares([1, 2, 3, 4, 5]))

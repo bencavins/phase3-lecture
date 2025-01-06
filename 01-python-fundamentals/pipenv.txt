@@ -1,0 +1,22 @@
+pipenv
+
+A tool for downloading Python packages
+And starting virtual environemnts
+
+Pipfile -- contains the packages needed the project
+Pipfile.lock -- has extra stuff for the machine (don't edit)
+
+pipenv install -- installs libs from Pipfile
+
+pipenv shell -- activate virtual environment
+
+exit -- leave the virtual environment
+
+
+Basic Lab setup process:
+1. Find the Pipfile
+2. cd into the Pipfile folder
+3. install the libraries (pipenv install)
+4. activate the virtual environment (pipenv shell)
+5. run pytest
+6. type "exit" when you are done to leave
