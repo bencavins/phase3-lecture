@@ -1,3 +1,9 @@
+# Practice
+# looping
+# mapping
+# filtering
+# finding min/max
+
 # 1. write a function that takes an array of numbers and squares each number
 def get_sqares(numbers):
     pass

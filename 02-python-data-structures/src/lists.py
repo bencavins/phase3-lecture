@@ -1,29 +1,51 @@
 my_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 
-# TODO Test if an element exists in `my_list`
+# Index lookup
+my_list[0] # 'a'
+my_list[-1] # 'g'
 
-# TODO Add element to the end
+# Add element to the end
+my_list.append('h')
 
-# TODO Insert element at an index
+# Insert element at an index
+my_list.insert(0, 'z')  # less efficient than append!
 
-# TODO Merge two lists together
+# Get length
+len(my_list) # 7
 
-# TODO Duplicate a list
+# Test if an element exists in `my_list`
+'a' in my_list  # True
+'z' not in my_list  # False
 
-# TODO Index lookup
+# Find index of an element
+my_list.index('a')  # 0
+# only returns the first instance!
 
-# TODO Slice
+# Merge two lists together
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b  # [1, 2, 3, 4, 5, 6]
 
-# TODO Get length
+# Slice
+my_list[1:3]  # ['b', 'c']
 
-# TODO Get min/max
+# Remove element from list
+my_list.pop(0)  # deletes 'a'
+my_list.remove('d')  # deletes 'd'
 
-# TODO Find index of an element
+# Duplicate a list
+my_list.copy()
 
-# TODO Count number of instances of an element
+# Get min/max
+a = [1, 2, 3, 4]
+min(a) # 1
+max(a) # 4
 
-# TODO Remove element from list
+# Count number of instances of an element
+a = ['a', 'a', 'b', 'c', 'c', 'c']
+a.count('c')  # 3
 
-# TODO Sorting (with an without a key)
+# Sorting (with an without a key)
+my_list.sort()
 
 # TODO sorted() vs .sort()
