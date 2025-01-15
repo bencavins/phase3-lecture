@@ -53,5 +53,5 @@ def update_artist_name_by_id(id, new_name):
     con.commit()
 
 
-
-print(update_artist_name_by_id(276, 'NEW TEST NAME'))
+if __name__ == '__main__':
+    print(update_artist_name_by_id(276, 'NEW TEST NAME'))
